@@ -1,0 +1,9 @@
+---
+- name: Create Directory on Windows
+  hosts: 172.16.0.240 # Replace 'windows_target' with the actual target host or group name
+  gather_facts: no  # We don't need to gather facts for this simple task
+  tasks:
+    - name: Create Directory
+      win_shell: |
+        New-Item -ItemType Directory -Force -Path C:\path\to\your\directory
+      delegate_to: localhost
