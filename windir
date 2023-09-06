@@ -1,7 +1,7 @@
 ---
-- hosts: 172.16.0.240
+- hosts: 172.16.0.122
   tasks:
   - name: Create directory
     ansible.windows.win_file:
-      path: C:\Temp\my_directory
+      path: C:\Windows\system32\my_directory
       state: directory
